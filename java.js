@@ -79,12 +79,12 @@ function game(){
             
                 if(roundPlayer >= 5 ){
                 console.log('You won the  match!')
-                console.log('You:' + roundPlayer + '  ||Bot:' + roundBot  );
+                console.log('You:' + roundPlayer + '  ' +'  ||Bot:' + roundBot  );
                 return null;
                     } 
                 else if(roundBot >=5){
                     console.log('You lost the  match!')
-                    console.log('You:' + roundPlayer + '  ||Bot:' + roundBot  );
+                    console.log('You:' + roundPlayer + '  ' +'  ||Bot:' + roundBot  );
                     return null;
                     }
                 }
@@ -93,20 +93,20 @@ function game(){
                 if(roundPlayer >= 5 ){
 
                     console.log('You won the  match!')
-                    console.log('You:' + roundPlayer + '  ||Bot:' + roundBot  );
+                    console.log('You:' + roundPlayer + '  ' +'  ||Bot:' + roundBot  );
                     return null;
                         } 
                     else if(roundBot >=5){
 
                         console.log('You lost the  match!')
-                        console.log('You:' + roundPlayer + '  ||Bot:' + roundBot  );
+                        console.log('You:' + roundPlayer + '  ' +'  ||Bot:' + roundBot  );
                         return null;
                         }
             }
             else if(asd == 'error typing'){
 
                 console.log('error typing');
-                console.log('You:' + roundPlayer + '  ||Bot:' + roundBot  );
+                console.log('You:' + roundPlayer + '  ' +'  ||Bot:' + roundBot  );
                 continue;
             }
 
@@ -115,7 +115,7 @@ function game(){
             }
           
             
-            console.log('You:' + roundPlayer + '  ||Bot:' + roundBot  );
+            console.log('You:' + roundPlayer + '  ' +'  ||Bot:' + roundBot  );
       }
 
 
