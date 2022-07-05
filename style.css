@@ -1,0 +1,89 @@
+body{
+    margin-left:500 px;
+    /*background-color : black;*/
+    min-height: 100%;
+    bottom:0;
+}
+
+
+
+.btn{
+  
+  border: .4rem solid black;
+  border-radius: .5rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease; /* animation time very important*/
+  width: 10rem;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.264);
+  text-shadow: 0 0 .5rem black;
+
+  
+}
+
+.btne{
+    border: .4rem solid black;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    transition: all .21s ease; /* animation time very important*/
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.264);
+    text-shadow: 0 0 .5rem black;
+}
+
+
+
+.draw{
+    transform: scale(1.1);
+    border-color: #ff9900;
+    box-shadow: 0 0 1rem #ff9900;
+}
+.lose {
+    transform: scale(1.1);
+    border-color: #ff0000;
+    box-shadow: 0 0 1rem #ff0000;
+}
+
+.win{
+    transform: scale(1.1);
+    border-color: #00ff08;
+    box-shadow: 0 0 1rem #00ff08;
+}
+
+
+
+
+.btnContain{
+    
+    margin-top:300 px;
+    display: flex;
+    flex: 1;
+    min-height: 90vh;
+    align-items: center;
+    
+
+}
+
+
+
+.hue{
+    font-size: 3rem;
+    color:red;
+}
+
+.hue.one{
+    margin-left: 230px;
+    padding-left:30px;
+}
+
+.hue.three{ 
+    margin-right:250px;
+}
+
