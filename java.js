@@ -12,23 +12,20 @@ butn.style.marginLeft= "880px";
 butn.style.position= "absolute";
 butn.style.bottom = "440px";
 
-
+//computer bottons
 const papir = document.getElementsByClassName("btne")[0];
 const sissor = document.getElementsByClassName("btne")[1];
 const rocki = document.getElementsByClassName("btne")[2];
-
+//human buttons
 const papiri = document.getElementsByClassName('btn')[0];
 const sisori = document.getElementsByClassName('btn')[1];
 const rokki  = document.getElementsByClassName('btn')[2];
-
-const happeh = document.getElemen
 
 const happy = document.getElementsByClassName('myAudio')[0];
 const sad = document.getElementsByClassName('myAudio')[1];
 
 
 function animatron2000(){
-    
     //bot animation remove
     rocki.classList.remove('win');
     papir.classList.remove('win')
@@ -39,9 +36,6 @@ function animatron2000(){
     rocki.classList.remove('draw');
     papir.classList.remove('draw')
     sissor.classList.remove('draw');
-
-
-
 
 
     //human anims remove
@@ -64,7 +58,6 @@ function animatron2000(){
 
 function computerPlay(){
     var choice = ['rock','paper','sissors'];
-
     return choice[  Math.floor(Math.random()*3)];
 }
 
@@ -72,109 +65,71 @@ function computerPlay(){
 
 
 function Fight_(playerchoice,computerchoice){
-      
    
-    if(playerchoice != "rock" && playerchoice != 'paper' && playerchoice != 'sissors'){
-        return 'error typing';
+    if (playerchoice == 'rock'){
+        if(computerchoice == 'rock'){
+            animatron2000();
+            rocki.classList.add('draw');
+            rokki.classList.add('draw');
+            
+        }
+        else if(computerchoice =='paper'){
+            animatron2000();
+            papir.classList.add('win')
+            rokki.classList.add('lose');
+            computerScore += 1;
+        }
+        else {
+            animatron2000();
+            rokki.classList.add('win');
+            sissor.classList.add('lose');
+            playerScore += 1;  
+        }
+    }
+    else if (playerchoice == 'paper'){
+        if(computerchoice == 'rock'){
+            animatron2000();
+            papiri.classList.add('win');
+            rocki.classList.add('lose');
+            playerScore += 1;
+        }
+        else if(computerchoice =='paper'){
+            animatron2000();
+            papir.classList.add('draw');
+            papiri.classList.add('draw');
+        }
+        else {
+            animatron2000();
+            sissor.classList.add('win');
+            papiri.classList.add('lose');
+            computerScore += 1;
+        }
     }
     else{
-       if (playerchoice == 'rock'){
-            if(computerchoice == 'rock'){
-                animatron2000();
-                rocki.classList.add('draw');
-                rokki.classList.add('draw');
-                
-            }
-            else if(computerchoice =='paper'){
-                //computer
-                animatron2000();
-                
-                papir.classList.add('win')
-                rokki.classList.add('lose');
-                computerScore += 1;
-                //man
-
-                
-            }
-            else {
-                animatron2000();
-                rokki.classList.add('win');
-                sissor.classList.add('lose');
-                
-                playerScore += 1;
-                
-
-                
-            }
-       }
-       else if (playerchoice == 'paper'){
-            if(computerchoice == 'rock'){
-                animatron2000();
-                papiri.classList.add('win');
-                rocki.classList.add('lose');
-                playerScore += 1;
-                //man
-            }
-            else if(computerchoice =='paper'){
-                animatron2000();
-                papir.classList.add('draw');
-                papiri.classList.add('draw');
-                
-                
-            }
-            else {
-                animatron2000();
-                sissor.classList.add('win');
-                papiri.classList.add('lose');
-               
-                computerScore += 1;
-                //man
-            }
+        if(computerchoice == 'rock'){
+            animatron2000();
+            rocki.classList.add('win');
+            sisori.classList.add('lose');
+            computerScore += 1;    
         }
-        else{
-            if(computerchoice == 'rock'){
-                
-                animatron2000();
-                rocki.classList.add('win');
-                sisori.classList.add('lose');
-                
-                computerScore += 1;
-                //man
-
-                
-                
-               
-
-               
-                
-                
-            }
-            else if(computerchoice =='paper'){
-                animatron2000();
-
-                sisori.classList.add('win');
-                papir.classList.add('lose');
-                playerScore += 1;
-                
-
-            }
-            else {
-                
-                animatron2000();
-                sisori.classList.add('draw');
-                sissor.classList.add('draw');
-
-            } 
-
-
+        else if(computerchoice =='paper'){
+            animatron2000();
+            sisori.classList.add('win');
+            papir.classList.add('lose');
+            playerScore += 1;
         }
-
+        else {
+            animatron2000();
+            sisori.classList.add('draw');
+            sissor.classList.add('draw');
+        } 
     }
-    
+
 }
+    
+
 
 function winner(){
-
     animatron2000();
     scoreb.textContent = null;
     scorep.textContent = null;
@@ -195,36 +150,21 @@ function winner(){
         sad.play();
         spli.textContent = "You Lose!";
         playag();
-    
     }
-    
 }
 
 function playag(){
     butn.style.visibility = 'visible';
     document.body.appendChild(butn);
-    
-    
 }
-
-
-function myfunc(){
-    console.log('hello');
-}
-
 
 butn.onclick = function(){
     spli.textContent = "-";
     playerScore= 0;
     computerScore= 0;
     butn.style.visibility= "hidden";
-
 }
 
-
-
-
-//window.addEventListener('click',choise );
 
 function clickHandler(e) {
  
@@ -251,14 +191,7 @@ function clickHandler(e) {
     if(playerScore === 5 || computerScore === 5 ){
         winner();
     }
-    
-
-
 }   
-
-
-
-
 
 
 
