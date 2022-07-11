@@ -13,9 +13,9 @@ butn.style.position= "absolute";
 butn.style.bottom = "440px";
 
 //computer bottons
-const papir = document.getElementsByClassName("btne")[0];
+const papir = document.getElementsByClassName("btne")[2];
 const sissor = document.getElementsByClassName("btne")[1];
-const rocki = document.getElementsByClassName("btne")[2];
+const rocki = document.getElementsByClassName("btne")[0];
 //human buttons
 const papiri = document.getElementsByClassName('btn')[0];
 const sisori = document.getElementsByClassName('btn')[1];
